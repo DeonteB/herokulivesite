@@ -1,0 +1,20 @@
+"use strict";
+(function()
+{
+        let protected_routes: string[] = [
+            "/contact-list",
+            "/edit",
+
+        ];
+        
+        if(protected_routes.indexOf(router.ActiveLink) > -1)
+        {
+            if(!sessionStorage.getItem("user"))
+            {
+                location.href = "/login";
+            }
+    
+        }
+        //check if use ris logged in
+       
+})();
