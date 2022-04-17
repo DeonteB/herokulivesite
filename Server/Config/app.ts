@@ -80,12 +80,6 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//JWT Options
-let jwtOptions =
-{
-  jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-  secretOrKey: DBConfig.SessionSecret
-}
 
 //define our JWT Strategy
 let strategy = new JWTStrategy(jwtOptions, function(jwt_payload, done)
