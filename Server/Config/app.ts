@@ -81,18 +81,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-//define our JWT Strategy
-let strategy = new JWTStrategy(jwtOptions, function(jwt_payload, done)
-{
-  User.findById(jwt_payload.id)
-    .then(user=>{
-      return done(null, user);
-    })
-    .catch(err => {
-      return done(err, false);
-    });
-});
-
 // Router Configuration
 app.use("/", indexRouter);
 app.use("/", authRouter);
