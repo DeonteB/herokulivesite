@@ -14,13 +14,13 @@ var core;
         get LinkData() {
             return this.m_linkData;
         }
-        set LinkData(link) {
-            this.m_linkData = link;
+        set LinkData(data) {
+            this.m_linkData = data;
         }
         constructor() {
             this.m_activeLink = "";
             this.m_linkData = "";
-            this.m_routingTable = new Array();
+            this.m_routingTable = [];
         }
         Add(route) {
             this.m_routingTable.push(route);
@@ -53,8 +53,8 @@ router.AddTable([
     "/contact",
     "/contact-list",
     "/projects",
-    "/login",
     "/register",
+    "/login",
     "/edit"
 ]);
 let route = location.pathname;
@@ -64,5 +64,4 @@ if (router.Find(route) > -1) {
 else {
     router.ActiveLink = "404";
 }
-router.ActiveLink = (router.Find(route) > -1) ? router.ActiveLink = (route == "/") ? "home" : route.substring(1) : "404";
 //# sourceMappingURL=router.js.map

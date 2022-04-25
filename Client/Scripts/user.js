@@ -9,8 +9,8 @@ var core;
         get DisplayName() {
             return this.m_displayName;
         }
-        set DisplayName(name) {
-            this.m_displayName = name;
+        set DisplayName(display_name) {
+            this.m_displayName = display_name;
         }
         get EmailAddress() {
             return this.m_emailAddress;
@@ -30,9 +30,9 @@ var core;
         set Password(password) {
             this.m_password = password;
         }
-        constructor(displayName = "", emailAdress = "", username = "", password = "") {
+        constructor(displayName = "", emailAddress = "", username = "", password = "") {
             this.m_displayName = displayName;
-            this.m_emailAddress = emailAdress;
+            this.m_emailAddress = emailAddress;
             this.m_username = username;
             this.m_password = password;
         }
@@ -43,7 +43,7 @@ var core;
             return {
                 "DisplayName": this.DisplayName,
                 "EmailAddress": this.EmailAddress,
-                "Username": this.Username,
+                "Username": this.Username
             };
         }
         fromJSON(data) {

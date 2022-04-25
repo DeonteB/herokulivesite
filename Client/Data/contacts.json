@@ -3,24 +3,18 @@
     [
         {
             "FullName": "Peter Parker",
-            "EmailAddress": "spdiderman@example.com",
-            "ContactNumber": "4164445555"
-            
-            
+            "EmailAddress": "spiderman@example.com",
+            "ContactNumber": "4165555555"
         },
         {
             "FullName": "Dr. Stephen Strange",
-            "EmailAddress": "drstrange@example.com",
-            "ContactNumber": "4164445556"
-            
-            
+            "EmailAddress": "doctorstrange@example.com",
+            "ContactNumber": "4165555556"
         },
         {
             "FullName": "Steve Rogers",
-            "EmailAddress": "captainamerica@example.com",
-            "ContactNumber": "4164445575"
-            
-            
+            "EmailAddress": "capatainamerica@example.com",
+            "ContactNumber": "4165555551"
         }
     ]
 }

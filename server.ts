@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-import app  from './Server/Config/app';
+import app from './Server/Config/app';
 import debug from 'debug';
 debug('temp:server');
 import http from 'http';
@@ -21,7 +21,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
- const server = http.createServer(app);
+const server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -35,15 +35,18 @@ server.on('listening', onListening);
  * Normalize a port into a number, string, or false.
  */
 
-function normalizePort(val: string) {
+function normalizePort(val: string) 
+{
   const port = parseInt(val, 10);
 
-  if (isNaN(port)) {
+  if (isNaN(port)) 
+  {
     // named pipe
     return val;
   }
 
-  if (port >= 0) {
+  if (port >= 0) 
+  {
     // port number
     return port;
   }
@@ -56,7 +59,8 @@ function normalizePort(val: string) {
  */
 
 function onError(error: HttpError) {
-  if (error.syscall !== 'listen') {
+  if (error.syscall !== 'listen') 
+  {
     throw error;
   }
 
@@ -65,7 +69,8 @@ function onError(error: HttpError) {
     : 'Port ' + port;
 
   // handle specific listen errors with friendly messages
-  switch (error.code) {
+  switch (error.code) 
+  {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
       process.exit(1);
@@ -83,7 +88,8 @@ function onError(error: HttpError) {
  * Event listener for HTTP server "listening" event.
  */
 
-function onListening() {
+function onListening() 
+{
   let addr = server.address() as string;
   let bind = 'pipe ' + addr;
   debug('Listening on ' + bind);

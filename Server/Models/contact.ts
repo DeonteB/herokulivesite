@@ -1,15 +1,15 @@
-import mongoose from "mongoose";
-const Schema = mongoose.Schema;
+import mongoose from 'mongoose';
+const Schema = mongoose.Schema; // alias
 
-const ContactSchema =new Schema 
+const ContactSchema = new Schema
 ({
     FullName: String,
-    ContactNumber: String,
-    EmailAdress: String
+    EmailAddress: String,
+    ContactNumber: String
 },
 {
     collection: "contacts"
 });
 
-const Model = mongoose.model("contact", ContactSchema);
+const Model = mongoose.model("Contact", ContactSchema);
 export default Model;

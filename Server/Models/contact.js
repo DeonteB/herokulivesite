@@ -7,11 +7,11 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const Schema = mongoose_1.default.Schema;
 const ContactSchema = new Schema({
     FullName: String,
-    ContactNumber: String,
-    EmailAdress: String
+    EmailAddress: String,
+    ContactNumber: String
 }, {
     collection: "contacts"
 });
-const Model = mongoose_1.default.model("contact", ContactSchema);
+const Model = mongoose_1.default.model("Contact", ContactSchema);
 exports.default = Model;
 //# sourceMappingURL=contact.js.map
